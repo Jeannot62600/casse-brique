@@ -1,0 +1,32 @@
+CC=g++
+CFLAGS=-W -Wall -ansi -pedantic
+LDFLAGS=`allegro-config --libs`
+MFLAGS=
+FILECPP = ./code/
+EXEC=cabricks
+
+all: $(EXEC)
+
+cabricks: main.o wall.o bricks.o point.o raq.o
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+point.o: point.cpp
+	$(CC) -o $@ -c $< $(MFLAGS)
+
+bricks.o: bricks.cpp
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+wall.o: wall.cpp
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+raq.o: raq.cpp
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+main.o: main.cpp wall.h bricks.h point.h raq.h
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)
