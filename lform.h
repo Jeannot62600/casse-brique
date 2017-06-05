@@ -1,5 +1,6 @@
 #ifndef LFORM_H
 #define LFORM_H
+#include <list>
 
 class form;
 
