@@ -1,9 +1,9 @@
-
 #define RAQ_H
 #include <allegro.h>
 #include "bricks.h"
+#include "form.h"
 
-class raq
+class raq:public bricks
 {
     public:
         raq();
@@ -13,9 +13,6 @@ class raq
         point getpos();
         void gotogauche(double x);
         void gotodroite();
-
-        virtual ~raq();
-
         void affiche(BITMAP*);
     protected:
         bricks br;

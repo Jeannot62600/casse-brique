@@ -2,9 +2,10 @@
 #define BRICKS_H
 #include <allegro.h>
 #include "point.h"
+#include "form.h"
 
 
-class bricks
+class bricks:public form
 {
     public:
         bricks();
@@ -15,9 +16,6 @@ class bricks
         void setpos(double X, double Y);
         void setlength(double ahauteur, double alargeur);
         point getpos();
-
-        virtual ~bricks();
-
         void affiche(BITMAP*);
     protected:
         point milieu;

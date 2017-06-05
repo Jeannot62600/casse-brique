@@ -1,8 +1,9 @@
 #ifndef POINT_H
 #define POINT_H
+#include "form.h"
 
 
-class point
+class point:form
 {
     private:
         double x;

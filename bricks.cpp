@@ -20,7 +20,6 @@ bricks::bricks(double ahauteur, double alargeur, point milieux, int acolor):mili
 }
 
 bricks::bricks(const bricks &source):milieu(source.milieu){
-    
     hauteur= source.hauteur;
     largeur= source.largeur;
     color= source.color;
