@@ -2,21 +2,20 @@
 #define WALL_H
 #include "bricks.h"
 #include "point.h"
+#include <list>
 
 
 class wall
 {
     public:
-        wall();
         wall(double anb, double ahaut);
-        virtual ~wall();
+        ~wall();
         void affiche(BITMAP*);
         void affichetext();
         void setcolor(int);
     protected:
-        double nbBrick;
-        double hautWall;
-        bricks briques[200];
+        list<bricks*> l_wa;
+        list<bricks*>::iterator wa_it;
     private:
 };
 

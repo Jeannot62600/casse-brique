@@ -3,11 +3,6 @@
 
 using namespace std;
 
-wall::wall()
-{
-    //ctor
-}
-
 wall::wall(double anb, double ahaut){
     nbBrick = anb;
     hautWall = ahaut;

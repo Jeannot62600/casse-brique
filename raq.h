@@ -8,6 +8,7 @@ class raq:public rectangle
 {
     public:
       raq();
+      ~raq();
       void followMouse(point);
     protected:
     private:
