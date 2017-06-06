@@ -3,7 +3,7 @@
 #include "form.h"
 
 
-class point:form
+class point:public form
 {
     private:
         double x;
@@ -19,7 +19,7 @@ class point:form
         void init(double x, double y);
         void initpol(double rho, double theta);
 
-        void affiche();
+        void affiche(BITMAP *);
         void deplace(double dx, double dy);
         void homothetie(double coef);
         void rotation(double dtheta);
